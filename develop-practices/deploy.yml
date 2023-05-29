@@ -1,6 +1,6 @@
 ---
  - name: Deploy a web application
-   hosts: "{{web_servers}}"
+   hosts: web_servers
    become: true
    gather_facts: false 
    tasks:
@@ -22,7 +22,7 @@
         enabled: true
 
  - name: Deploy database servers
-   hosts: "{{db_servers}}"
+   hosts: db_servers
    become: true
    tasks:
 
@@ -38,7 +38,7 @@
         enabled: true
 
  - name: Test web application
-   hosts: "{{web_servers}}"
+   hosts: web_servers
    tasks:
 
     - name: Web application test001
