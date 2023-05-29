@@ -1,5 +1,0 @@
-[web_servers]
-docker.kuwaitnet.lab
-
-[db_servers]
-ocp-svc.kuwaitnet.lab
